@@ -26,7 +26,7 @@ jobs:
             run: appleboy/scp-action@master
             with:
               host: ${{ secrets.HOST }}
-              username: ${{ secrets.USERNMAME }}
+              username: ${{ secrets.USERNAME }}
               password: ${{ secrets.PASSWORD }}
               sourse: "deploy/docker-compose.yaml,deploy/docker_config.py"
               target: "flask_app_ci"
