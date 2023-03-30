@@ -4,7 +4,7 @@ services:
   api:
     build:
       context: .
-    image: cr0un/skypro_cr0un_app::$GITHUB_REF_NAME-$GITHUB_RUN_ID
+    image: cr0un/skypro_cr0un_app:$GITHUB_REF_NAME-$GITHUB_RUN_ID
     ports:
       - 80:80
     volumes:
@@ -17,7 +17,7 @@ services:
   migrations:
     build:
       context: .
-    image: cr0un/skypro_cr0un_app::$GITHUB_REF_NAME-$GITHUB_RUN_ID
+    image: cr0un/skypro_cr0un_app:$GITHUB_REF_NAME-$GITHUB_RUN_ID
     volumes:
       - ./docker_config.py:/code/default_config.py
     depends_on:
